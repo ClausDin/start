@@ -18,3 +18,14 @@ else:
        factorial = factorial*i
    print("The factorial of",num,"is",factorial)
 Run Code
+apiVersion: serving.knative.dev/v1
+kind: Service
+...
+spec:
+  template:
+    spec:
+      containers:
+      - image: IMAGE_URL
+        ports:
+        - name: h2c
+          containerPort: 8080
